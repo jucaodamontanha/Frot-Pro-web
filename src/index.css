@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  /* CENTRALIZAÇÃO TOTAL: Mude aqui e muda no projeto todo */
+  --color-principal: #2563eb;
+  --color-secundaria: #1e293b;
+  --color-sucesso: #10b981;
+  --color-perigo: #ef4444;
+  --color-fundo: #f8fafc;
+  
+  --radius-padrao: 12px;
+}
+
+@layer components {
+  /* Classes utilitárias para não repetir código no HTML */
+  .btn-principal {
+    @apply bg-principal text-white px-6 py-2 rounded-[--radius-padrao] hover:opacity-90 transition-all font-medium cursor-pointer;
+  }
+  
+  .card-branco {
+    @apply bg-white rounded-[--radius-padrao] shadow-md border border-slate-100 overflow-hidden;
+  }
+}
